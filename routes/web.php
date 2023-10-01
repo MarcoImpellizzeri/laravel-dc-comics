@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.public');
+    return view('home', [
+        'home' => config('comics')
+    ]);
 });

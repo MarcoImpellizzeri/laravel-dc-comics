@@ -8,7 +8,17 @@
 
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 </head>
+
 <body>
-    
+    @include('partials.header')
+
+    <main>
+        @include('partials.hero')
+        @yield('content')
+        @include('partials.lower_navbar')
+    </main>
+
+    @include('partials.footer')
 </body>
+
 </html>

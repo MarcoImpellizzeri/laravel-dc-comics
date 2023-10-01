@@ -1,0 +1,74 @@
+@use "./variables" as *;
+
+footer {
+    .my-c-top {
+        background-image: url(../../../public/images/footer-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        >.container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $text-color-secondary;
+            height: 400px;
+
+            >.left-side {
+                display: flex;
+
+                a {
+                    font-size: .8rem;
+                    color: gray;
+                }
+            }
+
+            >.right-side {
+                overflow: hidden;
+                /* Nasconde le parti dell'immagine che eccedono il contenitore */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                /* Altezza uguale a quella del my-c-top */
+                flex-shrink: 0;
+                /* Evita il restringimento dell'immagine */
+            }
+        }
+    }
+
+    .my-c-bot {
+        background-color: $color-secondary;
+
+        >.container {
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                >h4 {
+                    margin: 0;
+                    padding-right: 10px;
+                    color: $color-primary;
+                }
+
+                a {
+                    padding: 0 10px 0 10px;
+                }
+            }
+        }
+    }
+
+    button {
+        color: $text-color-secondary;
+        border-radius: 0;
+        padding: .7rem;
+        border: 3px solid $color-primary;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

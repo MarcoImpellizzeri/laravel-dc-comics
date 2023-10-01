@@ -1,2 +1,13 @@
 @use 'bootstrap';
 @use '@fortawesome/fontawesome-free/css/all.min.css';
+
+@use './partials/header';
+@use './partials/hero';
+@use './partials/variables';
+@use './partials/footer';
+@use './partials/lower_navbar';
+@use './partials/home';
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
