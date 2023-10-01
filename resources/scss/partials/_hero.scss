@@ -5,16 +5,4 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
-
-    .container {
-        h3 {
-            color: $text-color-secondary;
-            position: absolute;
-            bottom: 23%;
-            left: 15%;
-            background-color: $color-primary;
-            padding: 1rem;
-            font-weight: bold;
-        }
-    }
 }

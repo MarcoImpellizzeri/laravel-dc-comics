@@ -6,7 +6,8 @@
 @use './partials/variables';
 @use './partials/footer';
 @use './partials/lower_navbar';
-@use './partials/home';
+@use './partials/_comics_index';
+@use './partials/_show';
 
 body {
     font-family: Arial, Helvetica, sans-serif;

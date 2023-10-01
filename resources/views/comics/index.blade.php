@@ -2,18 +2,21 @@
 
 
 @section('content')
+    <div class="container-current-series">
+        <h3>CURRENT SERIES</h3>
+    </div>
     <div class="comics-container">
         <div class="container my-5">
             <div class="row gy-4 pt-3">
-                @foreach($home as $comic)
+                @foreach ($comics as $comic)
                     <div class="col-2">
                         <div class="card">
-                            <a href="#0">
+                            <a href="{{ route('partials.show', $comic->id) }}">
                                 <div class="img-container">
-                                    <img src="{{ $comic['thumb'] }}" class="card-img" alt="{{ $comic['title'] }}">
+                                    <img src="{{ $comic->thumb }}" class="card-img" alt="{{ $comic->title }}">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ $comic['series'] }}</h5>
+                                    <h5 class="card-title">{{ $comic->title }}</h5>
                                 </div>
                             </a>
                         </div>

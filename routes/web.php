@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        'home' => config('comics')
-    ]);
-});
+Route::get("/", [ComicController::class, "index"]);
+Route::get("/{comic}", [ComicController::class, "show"])->name("partials.show");
