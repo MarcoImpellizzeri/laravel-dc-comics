@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// idenx e show
+
 Route::get("/", [ComicController::class, "index"])->name("comics.index");
+
+// create e store
+
+Route::get("/comics/create", [ComicController::class, 'create'])->name('comics.create');
+Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
+
 Route::get("/{comic}", [ComicController::class, "show"])->name("comics.show");
+
+

@@ -16,7 +16,15 @@ class ComicController extends Controller
     public function show($id)
     {
         $comic = Comic::findOrFail($id);
-        
+
         return view('comics.show', ["comic" => $comic]);
+    }
+
+    public function create() {
+        return view('comics.create');
+    }
+
+    public function store(Request $request) {
+        dd($request->all());
     }
 }
