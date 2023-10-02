@@ -26,6 +26,7 @@
         </div>
         <div class="container d-flex justify-content-center">
             <button class="btn btn-primary mb-3 px-5 rounded-0">LOAD MORE</button>
+            <a href="{{ route('comics.create') }}" class="btn btn-primary mb-3 px-5 rounded-0 ms-3">AGGIUNGI FUMETTO</a>
         </div>
     </div>
 @endsection

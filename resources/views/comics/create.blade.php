@@ -3,6 +3,8 @@
 
 @section('content')
     <div class="container py-5">
+        <h2 class="fw-bold py-3 text-uppercase">Inserisci i dati del tuo nuovo fumetto</h2>
+
         <form action="{{ route('comics.store')}}" method="POST">
             @csrf()
 
@@ -44,7 +46,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Salva</button>
-            <button class="btn btn-primary" href="{{ route('comics.index') }}">Indietro</button>
+            <a class="btn btn-primary" href="{{ route('comics.index') }}">Indietro</a>
         </form>
     </div>
 @endsection
