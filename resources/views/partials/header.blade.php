@@ -16,7 +16,7 @@ $navLinks = [
 
 <header>
     <div class="container py-4">
-        <a href="#0"><img src="../../images/dc-logo.png" alt="DC logo"></a>
+        <a href="{{ route('comics.index') }}"><img src="../../images/dc-logo.png" alt="DC logo"></a>
 
         <ul class="nav nav-pills">
             <?php foreach ($navLinks as $link): ?>

@@ -12,6 +12,7 @@
 
     @include ('partials.header')
     @include ('partials.hero')
+    
     <div class="show-container">
         <div class="blue-bar bg-primary"></div>
         <div class="container">
