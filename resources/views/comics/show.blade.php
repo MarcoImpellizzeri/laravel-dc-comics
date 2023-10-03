@@ -72,7 +72,11 @@
         <div class="text-center py-5">
             <a class="btn btn-primary" href="{{ route('comics.index') }}">Indietro</a>
             <a class="btn btn-warning" href="{{ route('comics.edit', $comic->id) }}" >Modifica</a>
-            <a href="#0" class="btn btn-danger">Elimina</a>
+            <form action="{{ route('comics.destroy', $comic->id)}}" method="POST" class="d-inline-block">
+                @csrf
+                @method("DELETE")
+                <button type="submit" class="btn btn-danger">Elimina</button>
+            </form>
         </div>
     </div>
 

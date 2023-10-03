@@ -21,7 +21,6 @@
                             </a>
                             <div class="text-center">
                                 <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning">Modifica</a>
-                                <a href="#0" class="btn btn-danger">Elimina</a>
                             </div>
                         </div>
                     </div>
