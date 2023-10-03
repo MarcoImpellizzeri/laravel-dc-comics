@@ -37,4 +37,16 @@ class Comic extends Model
     {
         $this->attributes['writers'] = json_encode($value);
     }
+
+    protected $fillable = [
+        "title",
+        "description",
+        "thumb",
+        "price",
+        "series",
+        "sales_date",
+        "type",
+        "artists",
+        "writers", 
+    ];
 }

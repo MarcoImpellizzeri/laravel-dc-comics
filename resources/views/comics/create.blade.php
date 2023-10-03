@@ -10,28 +10,28 @@
 
             <div class="mb-3">
                 <label class="form-labal">Titolo</label>
-                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" vlue="{{ old('title') }}">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}">
                 @error('title')
                     <div class="alert text-danger">{{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">
                 <label class="form-labal">Descrizione</label>
-                <textarea class="form-control @error('description') is-invalid @enderror" name="description" vlue="{{ old('description') }}"></textarea>
+                <textarea class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}"></textarea>
                 @error('description')
                     <div class="alert text-danger">{{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">
                 <label class="form-labal">Link immagine</label>
-                <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb" vlue="{{ old('thumb') }}">
+                <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb" value="{{ old('thumb') }}">
                 @error('thumb')
                     <div class="alert text-danger">{{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">
                 <label class="form-labal">Prezzo</label>
-                <input type="number" class="form-control @error('price') is-invalid @enderror" name="price" vlue="{{ old('price') }}">
+                <input type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}">
                 @error('price')
                     <div class="alert text-danger">{{ $message }}</div>
                 @enderror
