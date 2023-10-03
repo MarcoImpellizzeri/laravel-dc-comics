@@ -9,11 +9,16 @@ class Comic extends Model
 {
     use HasFactory;
 
+    // protected $casts = [
+    //     'artists' => 'array',
+    //     "writers" => "array"
+    // ];
+
     // Definisci l'accessor per il campo 'artists'
-    public function getArtistsAttribute($value)
-    {
-        return json_decode($value, true);
-    }
+    // public function getArtistsAttribute($value)
+    // {
+    //     return json_decode($value, true);
+    // }
 
     // Definisci il mutator per il campo 'artists'
     public function setArtistsAttribute($value)
@@ -22,10 +27,10 @@ class Comic extends Model
     }
 
     // Definisci l'accessor per il campo 'writers'
-    public function getWritersAttribute($value)
-    {
-        return json_decode($value, true);
-    }
+    // public function getWritersAttribute($value)
+    // {
+    //     return json_decode($value, true);
+    // }
 
     // Definisci il mutator per il campo 'writers'
     public function setWritersAttribute($value)
