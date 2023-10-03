@@ -19,6 +19,10 @@
                                     <h5 class="card-title">{{ $comic->title }}</h5>
                                 </div>
                             </a>
+                            <div class="text-center">
+                                <a href="#0" class="btn btn-warning">Modifica</a>
+                                <a href="#0" class="btn btn-danger">Elimina</a>
+                            </div>
                         </div>
                     </div>
                 @endforeach

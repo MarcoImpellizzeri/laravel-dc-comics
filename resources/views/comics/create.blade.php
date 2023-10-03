@@ -17,7 +17,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-labal">Descrizione</label>
-                <textarea class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}"></textarea>
+                <textarea class="form-control @error('description') is-invalid @enderror" name="description"></textarea>
                 @error('description')
                     <div class="alert text-danger">{{ $message }}</div>
                 @enderror
@@ -38,23 +38,23 @@
             </div>
             <div class="mb-3">
                 <label class="form-labal">Serie</label>
-                <input type="text" class="form-control" name="series" vlue="{{ old('series') }}">
+                <input type="text" class="form-control" name="series" value="{{ old('series') }}">
             </div>
             <div class="mb-3">
                 <label class="form-labal">Data di uscita</label>
-                <input type="date" class="form-control" name="sale_date" vlue="{{ old('sale_date') }}">
+                <input type="date" class="form-control" name="sale_date" value="{{ old('sale_date') }}">
             </div>
             <div class="mb-3">
                 <label class="form-labal">Tipo</label>
-                <input type="text" class="form-control" name="type" vlue="{{ old('type') }}">
+                <input type="text" class="form-control" name="type" value="{{ old('type') }}">
             </div>
             <div class="mb-3">
                 <label class="form-labal">Disegnatori</label>
-                <input type="text" class="form-control" name="artists" vlue="{{ old('artists') }}">
+                <input type="text" class="form-control" name="artists" value="{{ old('artists') }}">
             </div>
             <div class="mb-3">
                 <label class="form-labal">Scrittori</label>
-                <input type="text" class="form-control" name="writers" vlue="{{ old('writers') }}">
+                <input type="text" class="form-control" name="writers" value="{{ old('writers') }}">
             </div>
 
             <button type="submit" class="btn btn-primary">Salva</button>

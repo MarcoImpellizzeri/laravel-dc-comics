@@ -68,6 +68,12 @@
                 </div>
             </div>
         </div>
+
+        <div class="text-center py-5">
+            <a class="btn btn-primary" href="{{ route('comics.index') }}">Indietro</a>
+            <a href="#0" class="btn btn-warning">Modifica</a>
+            <a href="#0" class="btn btn-danger">Elimina</a>
+        </div>
     </div>
 
     @include('partials.lower_navbar')
