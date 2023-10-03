@@ -33,7 +33,7 @@ class ComicController extends Controller
             "title" => "required",
             "description" => "required|string",
             "thumb" => "required|string|max:500",
-            "price" => "required|integer|min:1|max:10000",
+            "price" => "required|numeric|min:1|max:10000",
             "series" => "nullable|string|max:255",
             "sales_date" => "nullable",
             "type" => "nullable",
@@ -55,5 +55,30 @@ class ComicController extends Controller
         $newComic->save();
 
         return redirect()->route('comics.show', $newComic->id);
+    }
+
+    public function edit($id) {
+        $comic = Comic::findOrFail($id);
+
+        return view("comics.edit", ["comic" => $comic]);
+    }
+
+    public function update(Request $request, $id) {
+        $comic = Comic::findOrFail($id);
+
+        $data = $request->validate([
+            "title" => "required",
+            "description" => "required|string",
+            "thumb" => "required|string|max:500",
+            "price" => "required|numeric|min:1|max:10000",
+            "series" => "nullable|string|max:255",
+            "sales_date" => "nullable",
+            "type" => "nullable",
+            "artists" => "nullable",
+            "writers" => "nullable|string"
+        ]);
+
+        $comic->update($data);
+        return redirect()->route('comics.show', $comic->id);
     }
 }

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// idenx e show
+// idenx
 
 Route::get("/", [ComicController::class, "index"])->name("comics.index");
 
@@ -23,6 +23,13 @@ Route::get("/", [ComicController::class, "index"])->name("comics.index");
 Route::get("/comics/create", [ComicController::class, 'create'])->name('comics.create');
 Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
 
+// show
+
 Route::get("/{comic}", [ComicController::class, "show"])->name("comics.show");
+
+// update
+
+Route::get("/comics/{id}/edit", [ComicController::class, "edit"])->name("comics.edit");
+Route::put("/comics/{id}", [ComicController::class, "update"])->name("comics.update");
 
 
